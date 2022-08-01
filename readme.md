@@ -28,8 +28,18 @@ $ npm start
 
 The format for inputting the latitude and longitude coordinates is
 
+After running npm start the weather can be viewed in the browser inputting the latitude and longitude coordinates as:
+
 - http://localhost:3000/lat/lon
   - Example: http://localhost:3000/33/-94
+
+or in command line with:
+
+```
+$ curl http://localhost:3000/33/-94
+```
+
+## Tests
 
 The unit tests can be run with
 
