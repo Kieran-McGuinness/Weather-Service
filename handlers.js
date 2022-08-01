@@ -23,11 +23,11 @@ const apiRequest = async (req, res) => {
   let climate = "";
 
   if (temp >= 80) {
-    climate = "hot";
+    climate = "Hot";
   } else if (temp <= 55) {
-    climate = "cold";
+    climate = "Cold";
   } else {
-    climate = "moderate";
+    climate = "Moderate";
   }
 
   const display = {
@@ -36,7 +36,12 @@ const apiRequest = async (req, res) => {
     climate: climate,
     alerts: alerts
       ? [{ event: alerts[0].event, description: alerts[0].description }]
-      : [{ event: "no alerts in this area", description: "no alerts" }],
+      : [
+          {
+            event: "There are no alerts in this area",
+            description: "There are no alert descriptions",
+          },
+        ],
   };
 
   res.send(display); //send the desired information

@@ -1,13 +1,9 @@
 const express = require("express");
 const app = express();
-const { callApi, initialResponse, apiRequest } = require("./handlers");
+const { initialResponse, apiRequest } = require("./handlers");
 
-// weather condition outside (snow, rain, etc)
-// whether its hot, cold, moderate
-// weather alert and what it is
-
-app.get("/", initialResponse);
-app.get("/:lat/:lon", apiRequest);
+app.get("/", initialResponse); //initial page route
+app.get("/:lat/:lon", apiRequest); // api route
 
 const PORT = process.env.PORT || 3000;
 
