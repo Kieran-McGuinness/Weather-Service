@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 const url = "https://api.openweathermap.org/data/3.0/onecall"; //API url
-const appid = process.env.API_KEY || ""; //api key goes here
+const appid = process.env.API_KEY || "19cec238330c6885fe0f80e1a9598138"; //api key goes here
 
 // handler for the initial page without a lat/lon
 const initialResponse = (req, res) => {
